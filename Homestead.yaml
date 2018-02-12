@@ -1,0 +1,22 @@
+ip: 192.168.230.50
+memory: 2048
+cpus: 2
+provider: virtualbox
+authorize: C:\Users\jimmyc\Documents\Identity.pub
+#keys:
+#    - ~/.ssh/id_rsa
+folders:
+    -
+        map: C:\Users\jimmyc\Documents\NetBeansProjects\cegeka-training
+        to: /home/vagrant/training
+        type: "nfs"
+sites:
+    -
+        map: training.develop
+        to: /home/vagrant/training/web
+        type: symfony
+        php: "7.1"
+databases:
+    - travel
+name: training
+hostname: training
