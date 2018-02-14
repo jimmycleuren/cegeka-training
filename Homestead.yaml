@@ -13,8 +13,8 @@ folders:
 sites:
     -
         map: jimmy.travel
-        to: /home/vagrant/training/web
-        type: symfony
+        to: /home/vagrant/training/public
+        type: symfony4
         php: "7.1"
 databases:
     - travel
