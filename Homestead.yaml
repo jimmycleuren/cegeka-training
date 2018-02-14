@@ -12,7 +12,7 @@ folders:
         type: "nfs"
 sites:
     -
-        map: training.develop
+        map: jimmy.travel
         to: /home/vagrant/training/web
         type: symfony
         php: "7.1"
