@@ -43,3 +43,7 @@
 /nbproject/
 /.vagrant/
 /vendor/
+
+/node_modules/
+/.env
+/public/build
