@@ -39,9 +39,10 @@ class SyncCommand extends ContainerAwareCommand
         $agencies = $this->em->getRepository("App:Agency")->findAll();
         
         foreach($agencies as $agency) {
-            
-            $this->syncHotels($agency, $io);
-            $this->syncFlights($agency, $io);
+            if ($agency->getUrl()) {
+                $this->syncHotels($agency, $io);
+                $this->syncFlights($agency, $io);
+            }
         }
 
         $io->success('Data synchronized from '.count($agencies).' agencies');
